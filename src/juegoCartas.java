@@ -8,7 +8,7 @@ public class juegoCartas {
         String[][] Baraja = inicializarCartas(Cartas);
         Boolean Condicion = true;
         int opcion = 0;
-        do {
+        do
             opcion =  menu();
         } while (opcion == 0);
 
