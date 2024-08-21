@@ -5,18 +5,18 @@ public class juegoCartas {
 
     public static void main(String[] args) {
         String[][] Cartas = crearMatrizCartas();
+        String[][] Baraja = inicializarCartas(Cartas);
         Boolean Condicion = true;
-
+        int opcion = 0;
         do {
-
-        } while (Condicion == true);
+            opcion =  menu();
+        } while (opcion == 0);
 
     }
 
-
-    public static String escogerOpcion () {
+    public static int escogerOpcion () {
         Scanner scanner = new Scanner(System.in);
-        String opcion = scanner.nextLine();
+        int opcion = scanner.nextInt();
         scanner.close();
         return opcion;
     }
@@ -27,10 +27,10 @@ public class juegoCartas {
         System.out.println("2. Salir");
     }
 
-    public static void menu() {
+    public static int menu() {
         opciones();
-        String Op = escogerOpcion();
-
+        int Op = escogerOpcion();
+        return Op;
     }
 
     public static String[][] crearMatrizCartas() {
@@ -74,7 +74,8 @@ public class juegoCartas {
         return valor;
     }
 
-    public static String[][] jugar() {
+    public static String[][] jugar(String m[][]) {
+
     }
 
 
